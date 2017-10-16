@@ -1,0 +1,413 @@
+html,
+body {
+    max-width: 1500px;
+    font-size: 16px;
+    margin: auto;
+    font-family: "Open Sans Condensed", "Palanquin Dark", Arial, sans-serif;
+    background-color: rgb(154, 154, 154);
+    letter-spacing: 0.1rem;
+}
+
+
+/* All Sections with flex & align-items: center */
+
+header,
+footer,
+.fulldiv,
+.learning,
+.thesis,
+.column1,
+.column2 .banner-text {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Misc Reutilized CSS Rules throughout website */
+
+.container {
+    width: 100%;
+    max-width: inherit;
+    border-top: none;
+    border: 0.1rem solid gray;
+}
+
+h2 {
+    padding-top: 1rem;
+    color: darkblue;
+    font-size: 2.5rem;
+}
+
+.column1,
+.column2 {
+    flex-direction: column;
+}
+
+.column1 {
+    max-width: 60%;
+}
+
+.column2 {
+    max-width: 40%;
+}
+
+
+/* Header Section */
+
+header {
+    position: fixed;
+    width: 100%;
+    max-width: inherit;
+    z-index: 1;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 4.5rem;
+    border-bottom: .05rem solid gray;
+}
+
+nav {
+    padding-right: 1rem;
+}
+
+nav span {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 1.25rem;
+    padding: 0rem 0.5rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img.mobile {
+    display: none;
+}
+
+header img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1.5rem;
+}
+
+.big,
+.small {
+    display: flex;
+    align-items: center;
+}
+
+.academy {
+    font-size: 1.3rem;
+    padding: .6rem .6rem;
+    color: #5b5b5b;
+}
+
+header p {
+    margin: .5rem 0.5rem;
+}
+
+nav span a {
+    margin-left: 0.5rem;
+    justify-content: flex-end;
+    color: black;
+    text-decoration: none;
+    padding-left: .8rem;
+    display: flex;
+}
+
+nav a:hover {
+    color: white;
+    background-color: black;
+    border-radius: .3rem;
+    transition: all 0s ease-in-out 300ms;
+}
+
+
+/* Banner Section */
+
+.banner {
+    padding-top: 2rem;
+    background-color: lightgray;
+    color: rgb(106, 106, 106);
+    border-bottom: 0..5rem solid gray;
+}
+
+.banner-image {
+    width: 60%;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.column1 img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-left: .5rem;
+}
+
+.banner-text {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.column2 {
+    width: 80%;
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    color: rgb(7, 45, 157);
+    text-shadow: 1px 1px #2b2a2a;
+}
+
+.banner h3 {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.button a {
+    font-size: 1.5rem;
+    padding: .75rem 5rem;
+    width: 80%;
+    text-align: center;
+    color: white;
+    background-color: #605b5b;
+    border-radius: .25rem;
+    margin: 1rem 1rem;
+}
+
+
+/* Info Section */
+
+.info {
+    background-color: white;
+}
+
+.info-small {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 0.1rem solid gray;
+    border-left: 0.1rem solid gray;
+    max-width: 100%;
+    padding: .5rem;
+}
+
+.box1 {
+    border-top: none;
+}
+
+.info-small img {
+    width: 100%;
+    max-width: 35%;
+    padding-right: .5rem;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0 auto;
+}
+
+.info h3 {
+    font-size: 1.25rem;
+    color: darkblue;
+}
+
+.column2 {
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 1rem;
+    height: auto;
+}
+
+.column2 a {
+    text-decoration: none;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.column1 .info-text {
+    padding-left: 1rem;
+}
+
+
+/* Learning Section */
+
+.learning {
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgray;
+    padding-bottom: 2rem;
+}
+
+.row1,
+.row2 {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.learn-box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 25%;
+    width: 100%;
+    margin: 1rem;
+}
+
+.learn-box img {
+    max-width: 100%;
+}
+
+.learn-text {
+    margin: 1rem;
+}
+
+.learn-box a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.learn-box h3,
+.learn-box h4 {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.learn-box h4 {
+    margin: 0.5rem 0;
+    font-style: italic;
+}
+
+
+/* Thesis Section */
+
+.thesis {
+    flex-direction: column;
+    color: darkblue;
+    background-color: white;
+}
+
+.thesis h2 {
+    padding: 0;
+    height: 2rem;
+}
+
+.column1-text h4 {
+    text-align: center;
+    max-width: 90%;
+    margin: 0;
+}
+
+.thesis-box {
+    align-items: flex-start;
+}
+
+video {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    border-radius: .25rem;
+}
+
+.column1-text {
+    padding: 0 0 2rem 3rem;
+}
+
+.column2 {
+    width: 100%;
+}
+
+.graybox {
+    background-color: lightgray;
+}
+
+.thesis-small {
+    border-top: none;
+    border-left: none;
+    border-bottom: 0.05rem solid black;
+    padding: 0rem;
+    margin: 1rem;
+    height: auto;
+    max-width: 90%;
+}
+
+
+/* Footer Code */
+
+footer {
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-top: none;
+    margin-left: 0.1rem;
+}
+
+.copyright {
+    padding-left: 1rem;
+}
+
+.social-network i {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: darkblue;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1rem;
+}
+
+.links a {
+    color: darkblue;
+    padding: 0 1rem;
+}
+
+
+/* Media Queries for Mobile Phones */
+
+@media only screen and (max-width: 460px) {
+    .column1,
+    .column2 {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 1rem;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+    header {
+        max-width: 100%;
+    }
+    img.mobile {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+    .column1 img {
+        margin-left: 0;
+    }
+    .banner-text {
+        padding-top: 0;
+    }
+    .big {
+        display: none;
+    }
+    .banner {
+        display: block;
+    }
+}

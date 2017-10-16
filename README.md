@@ -3,7 +3,7 @@ The Ultimate Colmar Capstone Academy Codecademy Project Class
 
 ## Getting Started
 
-Click download to access all original files for Porject. 
+Click download to access all original files for Porject. (https://github.com/mode-js/Colmar-Academy/archive/master.zip)
 
 Or click the link above to access the site directly in your browser. 
 

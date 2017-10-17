@@ -8,16 +8,39 @@ body {
     letter-spacing: 0.1rem;
 }
 
+.side-glow {
+    position:relative;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.side-glow:before, .side-glow:after {
+	content:"";
+    position: absolute;
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:4rem;
+    bottom:10px;
+    left:0;
+    right:0;
+    border-radius:100px / 10px;
+}
+.side-glow:after {
+    right:10px;
+    left:auto;
+    transform:skew(8deg) rotate(53deg);
+}
 
 /* All Sections with flex & align-items: center */
 
 header,
+nav,
+.menu,
+.title,
 footer,
-.fulldiv,
 .learning,
 .thesis,
 .column1,
-.column2 .banner-text {
+.column2 {
     display: flex;
     align-items: center;
 }
@@ -25,59 +48,20 @@ footer,
 
 /* Misc Reutilized CSS Rules throughout website */
 
-.container {
-    width: 100%;
-    max-width: inherit;
-    border-top: none;
-    border: 0.1rem solid gray;
-}
-
-h2 {
-    padding-top: 1rem;
-    color: darkblue;
-    font-size: 2.5rem;
-}
-
-.column1,
-.column2 {
-    flex-direction: column;
-}
-
-.column1 {
-    max-width: 60%;
-}
-
-.column2 {
-    max-width: 40%;
-}
-
-
 /* Header Section */
 
 header {
     position: fixed;
     width: 100%;
     max-width: inherit;
-    z-index: 1;
+    z-index: 100;
     font-size: 1.5rem;
     background-color: rgb(255, 255, 255);
-    margin-top: 0rem;
-    flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: space-between;
     height: 4.5rem;
+    flex-wrap: wrap;
     border-bottom: .05rem solid gray;
-}
-
-nav {
-    padding-right: 1rem;
-}
-
-nav span {
-    display: flex;
-    align-items: center;
-    color: gray;
-    font-size: 1.25rem;
-    padding: 0rem 0.5rem;
 }
 
 a {
@@ -85,47 +69,43 @@ a {
     text-decoration: none;
 }
 
-img.mobile {
-    display: none;
-}
-
 header img {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 1.5rem;
-}
-
-.big,
-.small {
-    display: flex;
-    align-items: center;
+    padding: 0 .5rem;
 }
 
 .academy {
     font-size: 1.3rem;
-    padding: .6rem .6rem;
     color: #5b5b5b;
 }
 
-header p {
-    margin: .5rem 0.5rem;
-}
+
+/* Navigation Section  (With Media Queries) */
 
 nav span a {
+    font-size: rem;
+    display: flex;
+    padding: 0rem 1rem;
     margin-left: 0.5rem;
     justify-content: flex-end;
     color: black;
-    text-decoration: none;
-    padding-left: .8rem;
-    display: flex;
 }
 
-nav a:hover {
-    color: white;
-    background-color: black;
-    border-radius: .3rem;
-    transition: all 0s ease-in-out 300ms;
+.mobile {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    nav span a:hover {
+       padding: 2px;
+    }
+    .menu .desktop {
+       display: none;
+    }
+    .menu .mobile {
+       display: flex;
+    }
 }
 
 
@@ -134,111 +114,202 @@ nav a:hover {
 .banner {
     padding-top: 2rem;
     background-color: lightgray;
-    color: rgb(106, 106, 106);
-    border-bottom: 0..5rem solid gray;
+    border-bottom: 0.05rem solid gray;
+    display: flex;
 }
 
 .banner-image {
-    width: 60%;
-    margin-top: 2rem;
-    margin-bottom: .5rem;
+  width: 60%;
+  margin: 3rem 0 1rem 2rem; 
+  padding-top: 1rem; 
 }
 
-.column1 img {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    margin-left: .5rem;
+.banner-image img {
+    width: 90%; 
 }
 
-.banner-text {
-    padding: 0 1rem;
-    text-align: center;
-}
-
-.column2 {
-    width: 80%;
+.banner-text { 
+    display: flex;  
+    flex-flow: wrap column;
+    justify-content: center; 
 }
 
 .banner-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.8rem; 
+    margin: 0;
     color: rgb(7, 45, 157);
     text-shadow: 1px 1px #2b2a2a;
 }
 
-.banner h3 {
-    font-size: 1.25rem;
-    margin-bottom: 3rem;
+.banner-text h2 {   
+  font-size: 1.2rem;
+  margin: 2rem 0; 
 }
 
 .button a {
-    font-size: 1.5rem;
-    padding: .75rem 5rem;
-    width: 80%;
+    font-size: 1.5rem; 
     text-align: center;
     color: white;
     background-color: #605b5b;
     border-radius: .25rem;
-    margin: 1rem 1rem;
+    border: 2px solid #012838;
+    padding: .5rem 5rem;
+    margin: 1rem 0;
+}
+
+@media only screen and (max-width: 800px) {
+.banner {
+    display: block; 
+ }
+ .banner-image {
+     display: block;
+     width: 100%; 
+     position: relative;
+     height: 20rem;
+     overflow: hidden;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ .banner img {
+     width: 100%;
+ }
+ .banner-text {
+     justify-content: center;
+     padding: 2rem 0;
+     align-items: center;
+     text-align: center;
+ }
+ .info-image {
+     display: none;
+ }
+    .info-small {
+        border-top: none;  
+        border-left: none;
+        width: 100%;
+    }
+}
+ 
+@media only screen and (max-width: 460px) {
+    .column1,
+    .column2 {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 1rem;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+    header {
+        max-width: 100%;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: inline-flex;
+        justify-content: center;
+        padding: 0 .5rem;
+    }
+    .banner img {
+        width: 100%;
+    }
+    .banner-image {
+        padding: 0;
+        margin: 0;
+        height: auto;
+        align-items: center;
+    }
+    .banner-text {
+        justify-content: center;
+        padding: 1rem;
+        margin: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+    .big {
+        display: none;
+    } 
+    
+    .links {
+        display: none;
+    }
+    footer {
+        font-size: .6rem;
+        border: none;
+    }
+    .button a {
+        font-size: 1rem; 
+        border: 1px solid #012838;
+        padding: .5rem 3rem;
+        margin: 2rem 0;
+    }
 }
 
 
 /* Info Section */
 
-.info {
+.practicing {
     background-color: white;
+    width: 100%;
+} 
+.info-image {   
+    margin-top: -1rem;
+    width: 60%;
+    background-image: url("./images/information-main.jpg"); 
+    background-repeat: no-repeat; 
+    background-position: top center; 
+}
+
+.info-text { 
+    background-color: white;
+    margin-top: 70%;
+    padding: .5rem;
+}
+
+.info-text h3 {
+    font-size: 1rem;
+    color: darkblue;
+    font-style: italic;
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.info-small h3 {
+    color: darkblue;
+    font-weight: 800;
+}
+
+.info-small a {
+    text-decoration: none;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.practicing .banner-text {
+    margin-left: 2rem;
+    width: 46%; 
+    justify-content: flex-start;
 }
 
 .info-small {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: flex; 
     align-items: center;
     border-top: 0.1rem solid gray;
     border-left: 0.1rem solid gray;
     max-width: 100%;
-    padding: .5rem;
+    padding: 1rem;
 }
 
 .box1 {
     border-top: none;
 }
 
-.info-small img {
-    width: 100%;
+.info-small img { 
     max-width: 35%;
     padding-right: .5rem;
 }
-
-h4 {
-    font-weight: normal;
-    font-size: 1rem;
-    font-style: italic;
-    margin: 0 auto;
-}
-
-.info h3 {
-    font-size: 1.25rem;
-    color: darkblue;
-}
-
-.column2 {
-    justify-content: space-between;
-    margin: 0 auto;
-    padding-left: 1rem;
-    height: auto;
-}
-
-.column2 a {
-    text-decoration: none;
-    font-weight: bold;
-    color: darkblue;
-}
-
-.column1 .info-text {
-    padding-left: 1rem;
-}
-
+ 
 
 /* Learning Section */
 
@@ -323,13 +394,6 @@ video {
     border-radius: .25rem;
 }
 
-.column1-text {
-    padding: 0 0 2rem 3rem;
-}
-
-.column2 {
-    width: 100%;
-}
 
 .graybox {
     background-color: lightgray;
@@ -374,40 +438,6 @@ footer {
     padding-right: 1rem;
 }
 
-.links a {
+.links span a {
     color: darkblue;
-    padding: 0 1rem;
-}
-
-
-/* Media Queries for Mobile Phones */
-
-@media only screen and (max-width: 460px) {
-    .column1,
-    .column2 {
-        width: 100%;
-        max-width: 100%;
-        padding-top: 1rem;
-        margin: 0 auto;
-        padding-left: 0;
-    }
-    header {
-        max-width: 100%;
-    }
-    img.mobile {
-        display: inline-flex;
-        justify-content: flex-end;
-    }
-    .column1 img {
-        margin-left: 0;
-    }
-    .banner-text {
-        padding-top: 0;
-    }
-    .big {
-        display: none;
-    }
-    .banner {
-        display: block;
-    }
 }

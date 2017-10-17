@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Title for Browser Window-->
-    <title>Colmar Capstone Project</title>
+    <link rel="icon" href="favicon.png" />
+    <title>Colmar Academy</title>
     <!--Linked Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:600,700|Palanquin:300,400,500|Sarala:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,200i,700" rel="stylesheet">
@@ -16,75 +17,52 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <div class="logo">
-                <img class="logo" src="Resources/images/ic-logo.svg" alt="Colmar Academy Logo" />
-                <p class="desktop big">
-                    <strong>COLMAR</strong>
-                    <span class="academy"> ACADEMY</span>
-                </p>
+    <!-- Header Section -->
+    <header>
+        <div class="title">
+            <img class="logo" src="Resources/images/ic-logo.svg" alt="Colmar Academy Logo" />
+            <span class="desktop"><strong>COLMAR</strong><span class="academy"> ACADEMY</span> </span>
+        </div>
+        <!--Nav Section for Larger Screens -->
+        <nav>
+            <div class="menu">
+                <span class="desktop"><a href="#">On Campus</a></span>
+                <span class="mobile"><a href="#"><img class="mobile" src=".\Resources\images\ic-on-campus.svg" alt="On Campus Logo" /></a></span>
+                <span class="desktop"><a href="#">Online</a></span>
+                <span class="mobile"><a href="#"><img class="mobile" src="./Resources/images/ic-online.svg" alt="Online Logo" /></a></span>
+                <span class="desktop"><a href="#">For Companies</a></span>
+                <span class="desktop"><a href="#">Sign In</a></span>
+                <span class="mobile"><a href="#"><img class="mobile" src="./Resources/images/ic-login.svg" alt="login logo" /></a></span>
             </div>
-            <!--Nav Section for Mobile Screens -->
-            <div class="logo">
-                <a href="#">
-                    <img class="mobile" src=".\Resources\images\ic-on-campus.svg" alt="On Campus Logo" />
-                </a>
-                <a href="#">
-                    <img class="mobile" src="./Resources/images/ic-online.svg" alt="Online Logo" />
-                </a>
-                <a href="#">
-                    <img class="mobile" src="./Resources/images/ic-login.svg" alt="login logo" />
-                </a>
-            </div>
-            <!--Nav Section for Larger Screens -->
-            <nav>
-                <div class="big medium">
-                    <span class="desktop1">
-                        <a href="#">On Campus</a>
-                    </span>
-                    <span class="desktop1">
-                        <a href="#">Online</a>
-                    </span>
-                    <span class="desktop1">
-                        <a href="#">For Companies</a>
-                    </span>
-                    <span class="desktop1">
-                        <a href="#">Sign In</a>
-                    </span>
-                </div>
-            </nav>
-        </header>
+        </nav>
+    </header>
 
         <!-- Banner Section -->
-        <div class="banner fulldiv">
-            <div class="banner-image column1">
-                <img src="Resources/images/banner.jpg" alt="Girl at picnic table" />
-            </div>
-            <div class="banner-text column2">
-                <h1>Learn Something New Everyday</h1>
-                <h3>Lorem Ipsum dolor sit ametc, consectetur adipiscing elit.</h3>
-                <div class="button start">
-                    <a href="#" alt="Link to Start here">Start Here</a>
-                </div>
-            </div>
+    <div class="banner side-glow">
+        <div class="banner-image">
+          <img src="Resources/images/banner.jpg" alt="Girl at picnic table" />
         </div>
-        <!--End of Banner Section-->
-
+        <div class="banner-text">
+          <h1>Learn Something New Everyday</h1>
+          <h2>Lorem Ipsum dolor sit ametc, consectetur adipiscing elit.</h2>
+          <span class="button"><a href="#" alt="Link to Start here">Start Here</a></span>
+        </div>
+    </div>
+         
         <!-- Info Section -->
-        <div class="info fulldiv">
-            <div class="column1">
-                <img src="./Resources/images/information-main.jpg" alt="Reading Student" />
-                <span class="info-text">
-                    <h2>It doesn't hurt to keep practicing</h2>
-                    <h4>"Wow, the life of a free man in ipsum porttitor consequat. No Comments Aliquam et laoreet vel, consequat
+
+    <div class="banner practicing">
+        <div class="banner-image info-image">
+               <!-- <img class="info-image" src="./Resources/images/information-main.jpg" alt="Reading Student" />           --> 
+            <div class="info-text">
+                <h2>It doesn't hurt to keep practicing</h2>
+                <h3>"Wow, the life of a free man in ipsum porttitor consequat. No Comments Aliquam et laoreet vel, consequat
                         neque, neither. But it is not accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet,
-                        it is effected dolor consequat, ligula tristique."</h4>
-                    <h5>Emanuel, Sr. Strategist at Hiring.com</h5>
-                </span>
-            </div>
-            <div class="column2">
+                        it is effected dolor consequat, ligula tristique."</h3>
+                <p>Emanuel, Sr. Strategist at Hiring.com</p>
+            </div> 
+        </div>
+            <div class="banner-text">
                 <div class="box1 info-small">
                     <img class="box1-large desktop" src="Resources/images/information-orientation.jpg" alt="Orientation Logo" />
                     <img class="box1-small mobile" src="Resources/images/information-orientation-mobile.jpg" alt="Orientation Logo" />
@@ -225,8 +203,8 @@
             <a href="https://twitter.com/Theremingenieur" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         </div>
         <div class="links">
-            <a href="#" alt="Terms of Use">Terms of Use</a>
-            <a href="#" alt="Privacy Policy">Privacy</a>
+            <span><a href="#" alt="Terms of Use">Terms of Use</a></span>
+            <span><a href="#" alt="Privacy Policy">Privacy</a></span>
         </div>
     </footer>
 </body>

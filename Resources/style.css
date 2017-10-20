@@ -345,13 +345,8 @@ footer {
         padding-bottom: 2rem;
     }
     .banner-image {
-        display: block;
         min-width: 100%;
-        position: relative;
-        height: 20rem;
-        overflow: hidden;
         margin: 0;
-        padding: 0;
         box-sizing: border-box;
     }
     .info-image {
@@ -364,26 +359,31 @@ footer {
     .info-small img {
         min-width: 95%;
         padding: 0;
-        margin-top: 1rem;
-    }
-    .info-small {
-        padding: 0;
     }
     .practicing .banner-text {
         min-width: 100%;
         margin: 0;
-        line-height: 1rem;
+    }
+    .box1,
+    .box2,
+    .box3 {
         margin-bottom: 2rem;
     }
     .learning-box {
-        display: block;
         min-width: 100%;
         text-align: center;
     }
     .learn-text {
-        height: 5rem;
+        height: 1.5rem;
         font-size: .9rem;
         text-align: center;
+    }
+    .learn-box {
+        max-width: 100%;
+        width: 90%;
+        border-radius: .25rem;
+        justify-content: center;
+        margin: 0.5rem;
     }
     .thesis2 {
         display: none;
@@ -415,21 +415,39 @@ footer {
     .banner img {
         width: 100%;
     }
-    .banner-image {
-        padding: 0;
-        margin: 0;
-        height: auto;
-        align-items: center;
-    }
     .banner-text {
         text-align: center;
         margin-bottom: 2rem;
     }
+    .row1,
+    .row2 {
+        width: 100%;
+        flex-flow: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
     footer .links {
         display: none;
+    }
+    .thesis h2 {
+        margin-bottom: 0.5rem;
+    }
+    .thesis1 {
+        margin: 0 1rem;
     }
     footer {
         font-size: 1rem;
         border: none;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .info-small {
+        padding: 0rem;
+    }
+    .box1,
+    .box2,
+    .box3 {
+        margin: 0 auto;
     }
 }

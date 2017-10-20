@@ -4,6 +4,7 @@ body {
     font-family: "Open Sans Condensed", "Palanquin Dark", Arial, sans-serif;
     background-color: rgb(154, 154, 154);
     letter-spacing: 0.1rem;
+    max-width: 1600px;
 }
 
 .side-glow {
@@ -17,8 +18,8 @@ body {
     position: absolute;
     z-index: -1;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    top: 4rem;
-    bottom: 10px;
+    top: 5px;
+    bottom: 5px;
     left: 0;
     right: 0;
     border-radius: 100px / 10px;
@@ -51,9 +52,6 @@ footer,
 /* Header Section */
 
 header {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
     font-size: 1.5rem;
     background-color: rgb(255, 255, 255);
     justify-content: space-between;
@@ -88,9 +86,18 @@ nav span a {
     display: none;
 }
 
+nav a:hover {
+    color: white;
+    background-color: black;
+    border-radius: .3rem;
+    padding: .6rem;
+    transition: all 0s ease-in-out 300ms;
+}
+
 @media only screen and (max-width: 800px) {
     nav span a:hover {
         padding: 2px;
+        background-color: white;
     }
     .menu .desktop {
         display: none;
@@ -104,7 +111,6 @@ nav span a {
 /* Banner Section */
 
 .banner {
-    padding-top: 2rem;
     background-color: lightgray;
     border-bottom: 0.05rem solid gray;
     display: flex;
@@ -161,6 +167,7 @@ footer {
     background-image: url("./images/information-main.jpg");
     background-repeat: no-repeat;
     background-position: top center;
+    margin-top: 1rem;
 }
 
 .info-text {
@@ -302,6 +309,7 @@ footer {
     justify-content: space-between;
     border-top: none;
     margin-left: 0.1rem;
+    width: 100%;
 }
 
 .copyright {
@@ -336,6 +344,11 @@ footer {
     }
     header {
         height: 3rem;
+        max-width: 800px;
+        width: 100%;
+    }
+    .menu {
+        margin-right: 1rem;
     }
     .banner {
         display: block;
@@ -401,9 +414,6 @@ footer {
     .learn-text h4 {
         display: none;
     }
-    header {
-        max-width: 100%;
-    }
     .desktop {
         display: none;
     }
@@ -438,6 +448,7 @@ footer {
     footer {
         font-size: 1rem;
         border: none;
+        letter-spacing: 0;
     }
 }
 
